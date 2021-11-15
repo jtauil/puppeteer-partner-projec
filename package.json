@@ -11,11 +11,16 @@
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
+    "excel4node": "^1.7.2",
     "exceljs": "^4.3.0",
+    "express": "^4.17.1",
+    "js-export-excel": "^1.1.4",
+    "json2xls": "^0.1.2",
     "node-excel-export": "^1.4.4",
     "puppeteer": "^11.0.0",
     "react-data-export": "^0.6.0",
     "request": "^2.88.2",
-    "request-promise": "^4.2.6"
+    "request-promise": "^4.2.6",
+    "xlsx": "^0.17.4"
   }
 }

@@ -1,6 +1,9 @@
 const puppeteer = require('puppeteer');
-const ExcelJS = require('exceljs');
-const workbook = new ExcelJS.Workbook();
+//const ExcelJS = require('exceljs');
+//const XLSX = require('xlsx');
+const reader = require('xlsx')
+
+
 
 const links = [];
 (async() => {
@@ -32,15 +35,33 @@ const links = [];
            tmp.phone = document.querySelector('h2 .attcontactNum').innerHTML;
            tmp.mail = document.querySelector('h2 a[href ^="mailto"]').innerHTML.replace(/<br>/g,'');
            tmp.practiceArea = document.querySelector('.atty-main p a[href ^="/?"').innerHTML;
+           tmp.link = document.querySelector('link[rel="canonical"]');
            return tmp;
          })
 
          partnerList.push(partner);
        }
-  console.log(enlaces.length);
-  console.log(enlaces);
-  console.log(partnerList);
+  //console.log(enlaces.length);
+  //console.log(enlaces);
+  console.table(partnerList);
+
+  const file = reader.readFile('./partnerTest.xlsx');
+const ws = reader.utils.json_to_sheet(partnerList);
+reader.utils.book_append_sheet(file,ws,"3");
+
+reader.writeFile(file,'./partnerTest.xlsx')
+
 })();
+
+
+
+
+
+
+
+
+
+
 
 
 
