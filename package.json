@@ -1,0 +1,21 @@
+{
+  "name": "web-scrapping--node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "exceljs": "^4.3.0",
+    "node-excel-export": "^1.4.4",
+    "puppeteer": "^11.0.0",
+    "react-data-export": "^0.6.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  }
+}
